@@ -1,0 +1,262 @@
+{
+	"info": {
+		"_postman_id": "ff0fb08b-230e-4493-a522-6d371d5abe4a",
+		"name": "ToDoManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16816654"
+	},
+	"item": [
+		{
+			"name": "createToDo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"name\":\"1_morning_workout\",\n    \"dueDate\":\"2024-02-28\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"name\":null,\n    \"dueDate\":\"2024-02-29\",\n    \"id\": 4,\n    \"status\": \"IN_PROGRESS\",\n    \"description\":\"morning work out before breakfast\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "queryTodoByDate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"dueDate\":\"2024-02-29\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/query",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "queryTodoByStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"status\":\"NOT_STARTED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/query",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "queryTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/query",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortTodoByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"sortType\":\"NAME\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortTodoByDueDate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"sortType\":\"DUE_DATE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sortTodoByStatus",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"sortType\":\"STATUS\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteTodo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":\"tester\",\n    \"id\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8443/todo/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"todo",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
